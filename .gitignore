@@ -2,7 +2,7 @@ node_modules
 
 /.cache
 /server/index.js
-/public/build
+**/build
 preferences.arc
 sam.json
 sam.yaml
