@@ -5,7 +5,7 @@
     "build": "run-s build:*",
     "build:remix": "remix build",
     "dev:remix": "remix watch",
-    "dev:arc": "cross-env NODE_ENV=development arc sandbox",
+    "dev:arc": "cross-env NODE_ENV=development remix dev",
     "dev": "remix build && run-p dev:*",
     "start": "remix-serve build"
   },
