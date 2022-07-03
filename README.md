@@ -1,6 +1,8 @@
-# Welcome to Remix!
+# Camilla's website
 
-- [Remix Docs](https://remix.run/docs)
+This is Camilla's personal for testing out new tech
+
+You can reach the deployed version at http://cmd.fyi.
 
 ## Development
 
