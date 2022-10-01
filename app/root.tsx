@@ -7,11 +7,9 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import tailwindStyles from "./tailwind.css";
+import styles from "./styles/app.css";
 
-export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: tailwindStyles },
-];
+export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -21,7 +19,7 @@ export const meta: MetaFunction = () => ({
 
 export default function App() {
   return (
-    <html lang="en" className="bg-slate-500 text-white">
+    <html lang="en" className="bg-raspberry-sorbet">
       <head>
         <Meta />
         <Links />
