@@ -534,19 +534,14 @@ video {
   gap: 0.5rem;
 }
 
-.bg-green-ash {
+.bg-raspberry-sorbet {
   --tw-bg-opacity: 1;
-  background-color: rgb(160 218 169 / var(--tw-bg-opacity));
+  background-color: rgb(210 56 108 / var(--tw-bg-opacity));
 }
 
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-raspberry-sorbet {
-  --tw-bg-opacity: 1;
-  background-color: rgb(210 56 108 / var(--tw-bg-opacity));
 }
 
 .py-5 {

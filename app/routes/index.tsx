@@ -1,8 +1,22 @@
+import type { LoaderArgs } from "@remix-run/node";
+import { json } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 import Card from "~/components/card";
+import { authenticator } from "~/services/auth.server";
+import Login from "./login";
+
+export const loader = async ({ request }: LoaderArgs) => {
+  const user = await authenticator.isAuthenticated(request);
+
+  return json({ user });
+};
 
 export default function Index() {
+  const { user } = useLoaderData<typeof loader>();
+
   return (
     <div className="my-10 mx-auto max-w-xl flex flex-col gap-2">
+      {!user && <Login />}
       <Card>
         <h1 className="text-3xl font-bold underline">cmd.fyi</h1>
         <p>
