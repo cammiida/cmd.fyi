@@ -1,4 +1,5 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import { json } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -7,6 +8,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import type { LoaderFunction } from "react-router-dom";
+import { authenticator } from "./services/auth.server";
 import styles from "./styles/app.css";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
@@ -16,6 +19,12 @@ export const meta: MetaFunction = () => ({
   title: "cmd.fyi",
   viewport: "width=device-width,initial-scale=1",
 });
+
+export const loader: LoaderFunction = async ({ request }) => {
+  const user = await authenticator.isAuthenticated(request);
+
+  return json({ user });
+};
 
 export default function App() {
   return (
