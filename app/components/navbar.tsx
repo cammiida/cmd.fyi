@@ -1,4 +1,4 @@
-import { useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 import Login from "~/components/login";
 import type { User } from "~/services/auth.server";
 import Logout from "./logout";
@@ -9,7 +9,7 @@ const Navbar = () => {
   const contentItems = (
     <>
       <li className="text-center align-middle flex justify-center">
-        <a href="default.asp">Home</a>
+        <Link to="/">Home</Link>
       </li>
     </>
   );
