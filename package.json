@@ -16,9 +16,9 @@
   "dependencies": {
     "@netlify/functions": "^1.4.0",
     "@remix-run/netlify": "^1.19.3",
-    "@remix-run/node": "^1.19.3",
-    "@remix-run/react": "^1.19.3",
-    "@remix-run/serve": "^1.19.3",
+    "@remix-run/node": "^2.15.0",
+    "@remix-run/react": "^2.15.0",
+    "@remix-run/serve": "^2.15.0",
     "cross-env": "^7.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -27,8 +27,8 @@
     "remix-auth-google": "^1.2.0"
   },
   "devDependencies": {
-    "@remix-run/dev": "^1.19.3",
-    "@remix-run/eslint-config": "^1.19.3",
+    "@remix-run/dev": "^2.15.0",
+    "@remix-run/eslint-config": "^2.15.0",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "autoprefixer": "^10.4.12",
@@ -37,7 +37,7 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.17",
     "tailwindcss": "^3.1.8",
-    "typescript": "^4.8.4"
+    "typescript": "^5.7.2"
   },
   "engines": {
     "node": ">=18"
