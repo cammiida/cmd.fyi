@@ -1,4 +1,4 @@
-import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import type { LinksFunction, V2_MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import {
   Links,
@@ -14,11 +14,11 @@ import styles from "./styles/app.css";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
-export const meta: MetaFunction = () => ({
-  charset: "utf-8",
-  title: "cmd.fyi",
-  viewport: "width=device-width,initial-scale=1",
-});
+export const meta: V2_MetaFunction = () => [
+  { charSet: "utf-8" },
+  { title: "cmd.fyi" },
+  { viewport: "width=device-width,initial-scale=1" },
+];
 
 export const loader: LoaderFunction = async ({ request }) => {
   const user = await authenticator.isAuthenticated(request);
