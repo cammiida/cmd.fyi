@@ -1,5 +1,4 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
-import { json } from "@remix-run/node";
 import {
   Links,
   Meta,
@@ -22,7 +21,7 @@ export const meta: MetaFunction = () => [
 export const loader: LoaderFunction = async ({ request }) => {
   const user = await authenticator.isAuthenticated(request);
 
-  return json({ user });
+  return { user };
 };
 
 export default function App() {
