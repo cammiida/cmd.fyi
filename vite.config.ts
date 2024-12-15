@@ -9,13 +9,7 @@ installGlobals();
 export default defineConfig({
   server: { port: 3000 },
   plugins: [
-    remix({
-      basename: "/",
-      buildDirectory: "build",
-      future: {},
-      ignoredRouteFiles: ["**/.*"],
-      serverBuildFile: "server.js",
-    }),
+    remix({ ignoredRouteFiles: ["**/.*"] }),
     netlifyPlugin(),
     tsconfigPaths(),
   ],
