@@ -1,6 +1,5 @@
 import { Link, useRouteLoaderData } from "@remix-run/react";
 import Login from "~/components/login";
-import { loader } from "~/root";
 import type { User } from "~/services/auth.server";
 import Logout from "./logout";
 

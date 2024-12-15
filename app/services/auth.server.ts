@@ -8,6 +8,6 @@ export type User = {
   photo?: string;
 };
 
-export let authenticator = new Authenticator<User>(sessionStorage);
+export const authenticator = new Authenticator<User>(sessionStorage);
 
 authenticator.use(googleStrategy, "google");
