@@ -2,7 +2,6 @@ import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import {
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
@@ -10,7 +9,7 @@ import {
 } from "@remix-run/react";
 import type { LoaderFunction } from "react-router-dom";
 import { authenticator } from "./services/auth.server";
-import styles from "./styles/app.css";
+import styles from "./styles/app.css?url";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
@@ -37,7 +36,6 @@ export default function App() {
         <Outlet />
         <ScrollRestoration />
         <Scripts />
-        <LiveReload />
       </body>
     </html>
   );
