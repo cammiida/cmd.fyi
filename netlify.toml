@@ -3,8 +3,8 @@
   publish = "build/client"
 
 [dev]
-  command = "remix watch"
-  port = 3000
+  command = "npm run dev"
+  framework = "vite"
 
 [[redirects]]
   from = "/*"
