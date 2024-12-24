@@ -8,9 +8,11 @@ import {
 } from "@remix-run/react";
 import type { LoaderFunction } from "react-router-dom";
 import { authenticator } from "./services/auth.server";
-import styles from "./styles/app.css?url";
+import tailwindStyles from "./styles/app.css?url";
 
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: tailwindStyles },
+];
 
 export const meta: MetaFunction = () => [
   { charSet: "utf-8" },
@@ -26,7 +28,7 @@ export const loader: LoaderFunction = async ({ request }) => {
 
 export default function App() {
   return (
-    <html lang="en" className="bg-raspberry-sorbet">
+    <html lang="en">
       <head>
         <Meta />
         <Links />
