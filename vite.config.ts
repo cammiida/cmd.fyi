@@ -21,4 +21,9 @@ export default defineConfig({
     netlifyPlugin(),
     tsconfigPaths(),
   ],
+  css: {
+    modules: {
+      localsConvention: "camelCase",
+    },
+  },
 });
