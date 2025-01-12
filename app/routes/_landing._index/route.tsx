@@ -1,5 +1,5 @@
-import AboutMe from "~/components/AboutMe";
-import Typewriter from "~/components/Typewriter";
+import AboutMe from "~/routes/_landing._index/about-me";
+import Typewriter from "~/routes/_landing._index/typewriter";
 
 export default function Index() {
   return (

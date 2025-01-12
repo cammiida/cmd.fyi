@@ -9,7 +9,6 @@ import {
 import type { LoaderFunction } from "react-router-dom";
 import { authenticator } from "./services/auth.server";
 import tailwindStyles from "./styles/app.css?url";
-import Header from "~/components/Header";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: tailwindStyles },
@@ -35,12 +34,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <div className="min-h-screen bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 text-white">
-          <Header />
-          <div>
-            <Outlet />
-          </div>
-        </div>
+        <Outlet />
         <ScrollRestoration />
         <Scripts />
       </body>
