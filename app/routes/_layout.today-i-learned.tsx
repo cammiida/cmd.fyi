@@ -7,7 +7,7 @@ type TIL = {
 
 const tilItems: TIL[] = [];
 
-export default function TodayILearned() {
+export default function AuthRegister() {
   return (
     <motion.section
       id="today-i-learned"
