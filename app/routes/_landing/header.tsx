@@ -13,7 +13,11 @@ export default function Header() {
         <motion.span whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
           <NavLink
             to="/"
-            className="flex justify-center space-x-6 font-bold text-xl text-yellow-300"
+            className={({ isActive }) =>
+              `flex justify-center space-x-6 font-bold text-xl hover:text-yellow-300 ${
+                isActive ? "text-yellow-300" : ""
+              }`
+            }
           >
             CMD
           </NavLink>

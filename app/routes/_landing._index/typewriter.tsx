@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
-import classes from "./Typewriter.module.css";
+import classes from "./typewriter.module.css";
 
-export default function Typewriter({ text }: { text: string }) {
+export default function Typewriter({
+  text,
+  className,
+}: {
+  text: string;
+  className?: string;
+}) {
   const [textIndex, setTextIndex] = useState(0);
 
   useEffect(() => {
@@ -15,5 +21,9 @@ export default function Typewriter({ text }: { text: string }) {
     return () => clearTimeout(timeout);
   }, [textIndex, text.length]);
 
-  return <p className={classes.writingBox}>{text.slice(0, textIndex)}</p>;
+  return (
+    <p className={`${classes.writingBox} ${className}`}>
+      {text.slice(0, textIndex)}
+    </p>
+  );
 }

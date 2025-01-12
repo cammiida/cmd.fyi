@@ -20,7 +20,6 @@ export default function AboutMe() {
     >
       <h2 className="text-3xl font-bold mb-6 text-yellow-300">About Me</h2>
       <motion.div
-        className="bg-white bg-opacity-20 backdrop-blur-md rounded-lg shadow-lg p-6"
         whileHover={{ scale: 1.02 }}
         transition={{ type: "spring", stiffness: 300 }}
       >
